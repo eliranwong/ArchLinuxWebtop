@@ -94,6 +94,12 @@ Check installed Chinese font list
 > fc-list :lang=zh | cut -d: -f1<br>
 > fc-list -f '%{family}\n' :lang=zh
 
+Further reference:
+
+https://wiki.archlinux.org/title/Localization_(正體中文)/Traditional_Chinese_(正體中文)
+
+https://wiki.archlinux.org/title/Localization_(简体中文)/Simplified_Chinese_(简体中文)
+
 # Input method fcitx
 
 > sudo pacman -S fcitx-im fcitx-googlepinyin fcitx-configtool opencc
