@@ -116,3 +116,16 @@ Manually add the following lines:
 > export XIM_PROGRAM="fcitx"<br>
 > export GTK_IM_MODULE="fcitx"<br>
 > export QT_IM_MODULE="fcitx"
+
+Run host terminal:
+
+> sudo docker restart webtop<br>
+Note: "docker restart webtop" on macOS
+
+After restart, select "Configure" from keyboard dropdown menu located on top navigation bar.
+
+Add Google PinYin
+
+To switch between GoodPinYin and default English Keyboard, use webtop VIRTUAL keyboard, made available by clicking the black dot button on the left.
+
+Press on <b>virtual keyboard</b> "Ctrl > SPACE > Ctrl"
