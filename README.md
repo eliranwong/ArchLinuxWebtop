@@ -52,7 +52,7 @@ To open Arch Linux webtop, open "localhost:3000" on a web browser.
 
 > sudo pacman -Syu
 
-> sudo pacman -S gcc git python-pip python-pyqt5 python-pyqt5-sip python-pyqt5-webengine python-qtpy
+> sudo pacman -S gcc glibc git python-pip python-pyqt5 python-pyqt5-sip python-pyqt5-webengine python-qtpy
 
 # Text Editor
 
