@@ -116,9 +116,11 @@ After restart, select "Configure" from keyboard dropdown menu located on top nav
 
 Add Google PinYin
 
-To switch between GoodPinYin and default English Keyboard, use webtop VIRTUAL keyboard, made available by clicking the black dot button on the left.
+To switch between GoodPinYin and default English Keyboard, either:
 
-Press on <b>virtual keyboard</b> "Ctrl > SPACE > Ctrl"
+1) Select "Input Method" via keyboard dropdown menu
+
+2) Press on webtop VIRTUAL keyboard, made available by clicking the black dot button on the left, "Ctrl > SPACE > Ctrl"
 
 # Install and run UniqueBibleApp
 
