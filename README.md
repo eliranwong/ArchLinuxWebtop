@@ -54,7 +54,7 @@ To setup, open Arch Linux terminal and run:
 
 > sudo pacman -Syu
 
-> sudo pacman -S gcc git python-pip python-pyqt5 python-pyqt5-sip python-pyqtwebengine python-qtpy
+> sudo pacman -S gcc git python-pip python-pyqt5 python-pyqt5-sip python-pyqt5-webengine python-qtpy
 
 > git clone https://github.com/eliranwong/UniqueBible
 
@@ -64,4 +64,55 @@ To run UBA:
 
 Note: Running UBA the first time takes extra time to install essential data.
 
-# Locale
+# Text Editor
+
+> sudo pacman -S nano
+
+# Display of Chinese characters
+
+Manually add "zh_CN.UTF8 UTF8"
+
+> sudo nano /etc/locale.gen
+
+To download language pack:
+
+> sudo locale-gen
+
+To download Traditioanl Chinese fonts:
+
+> sudo pacman -S wqy-bitmapfont wqy-zenhei ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts wqy-microhei wqy-microhei-lite
+
+To download additional Simplified Chinese fonts:
+
+> sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts noto-fonts-cjk
+
+To install user fonts [optional]:
+[It is optional, but you may consider it for WPS office to display characters properly.]<br>
+For example, put all fonts in a folder "MyFonts" in "Downloads", then enter in terminal:
+
+> mkdir ~/.fonts<br>
+> cp -r /mnt/chromeos/MyFiles/Downloads/MyFonts/ ~/.fonts/<br>
+> fc-cache -f -v<br>
+
+Check all installed font list
+
+> fc-list
+
+Check installed Chinese font list
+
+> fc-list :lang=zh | cut -d: -f2<br>
+> fc-list :lang=zh | cut -d: -f1<br>
+> fc-list -f '%{family}\n' :lang=zh
+
+# Input method fcitx
+
+> sudo pacman -S fcitx-im fcitx-googlepinyin fcitx-configtool opencc
+
+> nano ~/.xinitrc
+
+Manually add the following lines:
+
+> export XMODIFIERS="@im=fcitx"<br>
+> export XIM_PROGRAM="fcitx"<br>
+> export GTK_IM_MODULE="fcitx"<br>
+> export QT_IM_MODULE="fcitx"
