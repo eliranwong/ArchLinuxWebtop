@@ -129,3 +129,21 @@ Add Google PinYin
 To switch between GoodPinYin and default English Keyboard, use webtop VIRTUAL keyboard, made available by clicking the black dot button on the left.
 
 Press on <b>virtual keyboard</b> "Ctrl > SPACE > Ctrl"
+
+# Install and run UniqueBibleApp
+
+> git clone https://github.com/eliranwong/UniqueBible
+
+To run UBA:
+
+> python3 UniqueBible/uba.py
+
+Note: Running UBA the first time takes extra time to install essential data.
+
+Edit config.py after UBA ran the first time and closed.
+
+> qtLibrary = 'pyqt5'
+
+If fcitx is installed and you want to use it in UBA,
+
+> fcitx = True
