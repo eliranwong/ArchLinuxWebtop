@@ -48,21 +48,11 @@ notes:
 
 To open Arch Linux webtop, open "localhost:3000" on a web browser.
 
-# Download and Run UniqueBibleApp
-
-To setup, open Arch Linux terminal and run:
+# Install basic tools
 
 > sudo pacman -Syu
 
 > sudo pacman -S gcc git python-pip python-pyqt5 python-pyqt5-sip python-pyqt5-webengine python-qtpy
-
-> git clone https://github.com/eliranwong/UniqueBible
-
-To run UBA:
-
-> python3 UniqueBible/uba.py
-
-Note: Running UBA the first time takes extra time to install essential data.
 
 # Text Editor
 
