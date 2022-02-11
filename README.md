@@ -100,7 +100,7 @@ On host macOS:
 
 # Display of Chinese characters
 
-Manually add "zh_CN.UTF8 UTF8"
+Manually add "zh_CN.UTF-8 UTF-8" to /etc/locale.gen
 
 > sudo nano /etc/locale.gen
 
