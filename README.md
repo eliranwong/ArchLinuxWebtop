@@ -98,7 +98,7 @@ On host macOS:
 
 > sudo pacman -S nano geany
 
-# Display of Chinese characters
+# Display of Chinese characters [optional]
 
 Manually add "zh_CN.UTF-8 UTF-8" to /etc/locale.gen
 
@@ -140,7 +140,7 @@ https://wiki.archlinux.org/title/Localization_(正體中文)/Traditional_Chinese
 
 https://wiki.archlinux.org/title/Localization_(简体中文)/Simplified_Chinese_(简体中文)
 
-# Input method fcitx
+# Input method fcitx [optional]
 
 > sudo pacman -S fcitx-im fcitx-googlepinyin fcitx-configtool opencc
 
