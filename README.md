@@ -78,11 +78,9 @@ On webtop:
 
 > sudo pacman -Syu
 
-> sudo pacman -S nano pulseaudio
+> sudo pacman -S pulseaudio
 
-> sudo nano /etc/environment
-
-Manually add "PULSE_SERVER=host.docker.internal".  Press "Ctrl + O" to save and "Ctrl + X" to exit nano.
+> sudo sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
 
 On host macOS:
 
@@ -106,9 +104,7 @@ On host macOS:
 
 # Display of Chinese characters [optional]
 
-Manually add "zh_CN.UTF-8 UTF-8" to /etc/locale.gen
-
-> sudo nano /etc/locale.gen
+> sudo sh -c 'echo "zh_CN.UTF-8 UTF-8" >> /etc/locale.gen'
 
 To download language pack:
 
@@ -150,14 +146,7 @@ https://wiki.archlinux.org/title/Localization_(简体中文)/Simplified_Chinese_
 
 > sudo pacman -S fcitx-im fcitx-googlepinyin fcitx-configtool opencc
 
-> nano ~/.xinitrc
-
-Manually add the following lines:
-
-> export XMODIFIERS="@im=fcitx"<br>
-> export XIM_PROGRAM="fcitx"<br>
-> export GTK_IM_MODULE="fcitx"<br>
-> export QT_IM_MODULE="fcitx"
+> echo $'export XMODIFIERS="@im=fcitx"\nexport XIM_PROGRAM="fcitx"\nexport GTK_IM_MODULE="fcitx"\nexport QT_IM_MODULE="fcitx"' >> ~/.xinitrc
 
 Run host terminal:
 
