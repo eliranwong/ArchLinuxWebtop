@@ -62,6 +62,18 @@ On host macOS:
 
 > pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon
 
+(One may use the following line to check which shell is being used. recent macOS versions use zsh by default, older versions use bash by default):
+
+> echo $SHELL
+
+(For zsh users)
+
+> echo 'pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon' >> ~/.zshrc
+
+(For bash users)
+
+> echo 'pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon' >> ~/.bash_profile
+
 On webtop:
 
 > sudo pacman -Syu
