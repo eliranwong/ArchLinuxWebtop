@@ -180,3 +180,7 @@ Edit config.py after UBA ran the first time and closed.
 If fcitx is installed and you want to use it in UBA,
 
 > fcitx = True
+
+# Useful command line tools
+
+https://bbs.archlinux.org/viewtopic.php?id=50475
