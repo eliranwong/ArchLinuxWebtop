@@ -36,17 +36,45 @@ https://docs.docker.com/desktop/windows/install/
 
 # Setup Arch Linux Webtop
 
-> sudo docker run -d --name=webtop --security-opt seccomp=unconfined -e PUID=1000 -e PGID=1000 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v /home/\<user\>/development/webtops/arch-xfce:/config -v /var/run/docker.sock:/var/run/docker.sock --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/webtop:arch-xfce
+For macOS users:
+
+> docker run -d --name=webtop --security-opt seccomp=unconfined -e PULSE_SERVER=host.docker.internal -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v /Users/\<user\>/webtops/arch-xfce:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/webtop:arch-xfce
+
+Others:
+
+> sudo docker run -d --name=webtop --security-opt seccomp=unconfined -e PUID=1000 -e PGID=1000 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v /home/\<user\>/webtops/arch-xfce:/config -v /var/run/docker.sock:/var/run/docker.sock --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/webtop:arch-xfce
 
 notes:
 
-* no need to use "sudo" on macOS.
+* check host user UID and GID with command "id \<user\>", change -e PUID=501 -e PGID=20 [macOS] or -e PUID=1000 -e PGID=1000 [chomeOS] if necessary.
 
-* check UID and GID with command "id \<user\>", change -e PUID=1000 -e PGID=1000 if necessary.
+* /home/\<user\>/webtops is the host local path for storing webtop home directory, change it according your own needs.
 
-* /home/\<user\>/development/webtops is the host local path for storing webtop home directory, change it according your own needs.
+# Open Arch Linux webtop
 
-To open Arch Linux webtop, open "localhost:3000" on a web browser.
+Open "localhost:3000" with a web browser.
+
+# Setup audio [macOS users ONLY]
+
+On host macOS:
+
+> brew install pulseaudio
+
+> pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon
+
+On webtop:
+
+> sudo pacman -Syu
+
+> sudo pacman -S nano pulseaudio
+
+> sudo /etc/environment
+
+Manually add "PULSE_SERVER=host.docker.internal".  Press "Ctrl + O" to save and "Ctrl + X" to exit nano.
+
+On host macOS:
+
+> docker restart webtop
 
 # Install basic tools
 
