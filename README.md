@@ -191,6 +191,8 @@ To test:
 
 > gtts-cli 'hello' | play -t mp3 -
 
+> gtts-cli --lang zh --nocheck '你好' | play -t mp3 -
+
 > gtts-cli 'hello' --output hello.mp3
 
 > mpg123 hello.mp3
