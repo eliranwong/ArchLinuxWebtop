@@ -181,13 +181,23 @@ To test:
 
 Documents: https://gtts.readthedocs.io/en/latest/
 
+# Install media player
+
+For example, vlc player:
+
+> sudo pacman -S vlc
+
 # Install and run UniqueBibleApp
 
 > git clone https://github.com/eliranwong/UniqueBible
 
-To run UBA:
+To run UBA, either:
+
+* Open terminal and run:
 
 > python3 UniqueBible/uba.py
+
+* or open from menu "Applications" > "Other" > "Unique Bible App"
 
 Note: Running UBA the first time takes extra time to install essential data.
 
