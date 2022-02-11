@@ -181,6 +181,22 @@ If fcitx is installed and you want to use it in UBA,
 
 > fcitx = True
 
+# Text-to-speech
+
+> pip install gTTS
+
+> sudo pacman -S sox mpg123
+
+To test:
+
+> gtts-cli 'hello' | play -t mp3 -
+
+> gtts-cli 'hello' --output hello.mp3
+
+> mpg123 hello.mp3
+
+Documents: https://gtts.readthedocs.io/en/latest/
+
 # Useful command line tools
 
 https://bbs.archlinux.org/viewtopic.php?id=50475
