@@ -78,9 +78,11 @@ On webtop:
 
 > sudo pacman -Syu
 
-> sudo pacman -S pulseaudio
+> sudo pacman -S nano pulseaudio
 
-> sudo echo 'PULSE_SERVER=host.docker.internal' >> /etc/environment
+> sudo /etc/environment
+
+Manually add "PULSE_SERVER=host.docker.internal".  Press "Ctrl + O" to save and "Ctrl + X" to exit nano.
 
 On host macOS:
 
