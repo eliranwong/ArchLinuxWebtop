@@ -94,6 +94,12 @@ On host macOS:
 
 > sudo pacman -S wget gcc glibc git python-pip python-pyqt5 python-pyqt5-sip python-pyqt5-webengine python-qtpy
 
+> pip install --upgrade pip
+
+# Add PATH
+
+> echo 'export PATH="${PATH}:/config/.local/bin"' >> ~/.bashrc
+
 # Text Editor
 
 > sudo pacman -S nano geany
