@@ -239,6 +239,14 @@ To remove extra packages and any remnants from past installations:
 
 > yay -Yc
 
+# Uninstall pacman package(s)
+
+To search for package name(s) associated with an app, e.g. libreoffice:
+
+> sudo pacman -Ss libreoffice | grep -i installed
+
+> sudo pacman -Rs [package]
+
 # Useful command line tools
 
 https://bbs.archlinux.org/viewtopic.php?id=50475
