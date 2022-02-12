@@ -211,6 +211,30 @@ If fcitx is installed and you want to use it in UBA,
 
 > fcitx = True
 
+# Install AUR Helper - yay
+
+> git clone https://aur.archlinux.org/yay.gi
+
+> cd yay
+
+> makepkg -si
+
+To update available AUR packages:
+
+> yay -Syu
+
+To search for AUR package(s):
+
+> yay -Ss [string]
+
+To install an AUR package:
+
+> yay -S [package]
+
+To uninstall an AUR package:
+
+> yay -Rns [package]
+
 # Useful command line tools
 
 https://bbs.archlinux.org/viewtopic.php?id=50475
