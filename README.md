@@ -235,6 +235,10 @@ To uninstall an AUR package:
 
 > yay -Rns [package]
 
+To remove extra packages and any remnants from past installations:
+
+> yay -Yc
+
 # Useful command line tools
 
 https://bbs.archlinux.org/viewtopic.php?id=50475
