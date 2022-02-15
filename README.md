@@ -38,17 +38,17 @@ https://docs.docker.com/desktop/windows/install/
 
 For macOS users:
 
-> docker run -d --name=webtop --security-opt seccomp=unconfined -e PULSE_SERVER=host.docker.internal -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v /Users/\<user\>/webtops/arch-xfce:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/webtop:arch-xfce
+> docker run -d --name=webtop --security-opt seccomp=unconfined -e PULSE_SERVER=host.docker.internal -e PUID=501 -e PGID=20 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/webtops/arch-xfce:/config -v /var/run/docker.sock:/var/run/docker.sock -v ~/.config/pulse:/config/.config/pulse --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/webtop:arch-xfce
 
 Others:
 
-> sudo docker run -d --name=webtop --security-opt seccomp=unconfined -e PUID=1000 -e PGID=1000 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v /home/\<user\>/webtops/arch-xfce:/config -v /var/run/docker.sock:/var/run/docker.sock --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/webtop:arch-xfce
+> sudo docker run -d --name=webtop --security-opt seccomp=unconfined -e PUID=1000 -e PGID=1000 -e TZ=Europe/London -e SUBFOLDER=/ -e KEYBOARD=en-gb-qwerty -p 3000:3000 -v ~/webtops/arch-xfce:/config -v /var/run/docker.sock:/var/run/docker.sock --shm-size="1gb" --restart unless-stopped lscr.io/linuxserver/webtop:arch-xfce
 
 notes:
 
 * check host user UID and GID with command "id \<user\>", change -e PUID=501 -e PGID=20 [macOS] or -e PUID=1000 -e PGID=1000 [chomeOS] if necessary.
 
-* /home/\<user\>/webtops is the host local path for storing webtop home directory, change it according your own needs.
+* ~/webtops is the host local path for storing webtop home directory, change it according your own needs.
 
 # Open Arch Linux webtop
 
@@ -76,9 +76,9 @@ On host macOS:
 
 On webtop:
 
-> sudo pacman -Syu
+> sudo pacman -Syu --noconfirm
 
-> sudo pacman -S pulseaudio
+> sudo pacman -S --noconfirm pulseaudio
 
 > sudo sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
 
@@ -88,9 +88,9 @@ On host macOS:
 
 # Install basic tools
 
-> sudo pacman -Syu
+> sudo pacman -Syu --noconfirm 
 
-> sudo pacman -S wget gcc glibc git python-pip python-pyqt5 python-pyqt5-sip python-pyqt5-webengine python-qtpy
+> sudo pacman -S --noconfirm wget gcc glibc git python-pip python-pyqt5 python-pyqt5-sip python-pyqt5-webengine python-qtpy
 
 > pip install --upgrade pip
 
@@ -100,7 +100,7 @@ On host macOS:
 
 # Text Editor
 
-> sudo pacman -S nano geany
+> sudo pacman -S --noconfirm nano geany
 
 # Display of Chinese characters [optional]
 
@@ -112,11 +112,11 @@ To download language pack:
 
 To download Traditioanl Chinese fonts:
 
-> sudo pacman -S wqy-bitmapfont wqy-zenhei ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts wqy-microhei wqy-microhei-lite
+> sudo pacman -S --noconfirm wqy-bitmapfont wqy-zenhei ttf-arphic-ukai ttf-arphic-uming opendesktop-fonts wqy-microhei wqy-microhei-lite
 
 To download additional Simplified Chinese fonts:
 
-> sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts noto-fonts-cjk
+> sudo pacman -S --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts noto-fonts-cjk
 
 To install user fonts [optional]:
 [It is optional, but you may consider it for WPS office to display characters properly.]<br>
@@ -144,7 +144,7 @@ https://wiki.archlinux.org/title/Localization_(简体中文)/Simplified_Chinese_
 
 # Input method fcitx [optional]
 
-> sudo pacman -S fcitx-im fcitx-googlepinyin fcitx-configtool opencc
+> sudo pacman -S --noconfirm fcitx-im fcitx-googlepinyin fcitx-configtool opencc
 
 > echo $'export XMODIFIERS="@im=fcitx"\nexport XIM_PROGRAM="fcitx"\nexport GTK_IM_MODULE="fcitx"\nexport QT_IM_MODULE="fcitx"' >> ~/.xinitrc
 
@@ -167,7 +167,7 @@ To switch between GoodPinYin and default English Keyboard, either:
 
 > pip install gTTS
 
-> sudo pacman -S sox mpg123
+> sudo pacman -S --noconfirm sox mpg123
 
 To test:
 
@@ -185,7 +185,7 @@ Documents: https://gtts.readthedocs.io/en/latest/
 
 For example, vlc player:
 
-> sudo pacman -S vlc
+> sudo pacman -S --noconfirm vlc
 
 # Install and run UniqueBibleApp
 
