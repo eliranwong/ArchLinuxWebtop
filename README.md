@@ -80,11 +80,9 @@ On webtop:
 
 > sudo pacman -S --noconfirm pulseaudio
 
+> export PULSE_SERVER=host.docker.internal
+
 > sudo sh -c 'echo "PULSE_SERVER=host.docker.internal" >> /etc/environment'
-
-On host macOS:
-
-> docker restart webtop
 
 # Install basic tools
 
