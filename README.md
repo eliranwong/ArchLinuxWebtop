@@ -5,6 +5,18 @@ These notes are integrated into one of our projects: https://github.com/eliranwo
 
 # Setup docker
 
+On Windows:
+
+https://docs.docker.com/desktop/windows/install/
+
+On Apple macOS:
+
+https://docs.docker.com/desktop/mac/install/
+
+On ChromeOS:
+
+https://dvillalobos.github.io/2020/How-to-install-and-run-Docker-on-a-Chromebook/
+
 On Linux [Debian / Ubuntu]:
 
 > sudo apt update & sudo apt dist-upgrade
@@ -23,18 +35,6 @@ On Linux [Debian / Ubuntu]:
 > sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 > sudo docker run hello-world
-
-On ChromeOS:
-
-https://dvillalobos.github.io/2020/How-to-install-and-run-Docker-on-a-Chromebook/
-
-On macOS:
-
-https://docs.docker.com/desktop/mac/install/
-
-On Windows:
-
-https://docs.docker.com/desktop/windows/install/
 
 # Setup Arch Linux Webtop
 
