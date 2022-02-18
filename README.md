@@ -1,6 +1,8 @@
 # ArchLinuxWebtop
 Notes on setup of Arch Linux webtop
 
+These notes are integrated into one of our projects: https://github.com/eliranwong/uniquebibleapp-webtop
+
 # Setup docker
 
 On Linux [Debian / Ubuntu]:
