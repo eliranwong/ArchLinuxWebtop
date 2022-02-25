@@ -213,7 +213,7 @@ If fcitx is installed and you want to use it in UBA,
 
 # Install AUR Helper - yay
 
-> git clone https://aur.archlinux.org/yay.gi
+> git clone https://aur.archlinux.org/yay.git
 
 > cd yay
 
